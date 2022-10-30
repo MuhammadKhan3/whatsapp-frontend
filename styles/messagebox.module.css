@@ -88,3 +88,11 @@
   margin-top: 10px;
 
 }
+.videoContainer{
+  display: flex;
+  flex-direction: row;
+  z-index: 99999;
+}
+.video{
+  width: 400px;
+}
