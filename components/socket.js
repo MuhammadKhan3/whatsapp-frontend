@@ -1,5 +1,5 @@
 import { io } from 'socket.io-client';
-export const socket = io('https://whatsapp-ba.herokuapp.com');
+export const socket = io('https://whatsapp-ba.herokuapp.com:3000');
 export let socketID = '';
 socket.on('connect', () => {
     console.log(socket.id)
