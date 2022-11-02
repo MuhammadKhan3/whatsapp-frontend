@@ -4,8 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Styles from '../styles/login.module.css'
 import { useCookies } from 'react-cookie';
-const { io } = require("socket.io-client");
-const socket = io('https://whatsapp-ba.herokuapp.com');
 function LoginPage() {
     const [cookies, setCookie] = useCookies(["userId","token"]);
     const router = useRouter()
@@ -17,7 +15,7 @@ function LoginPage() {
             email:email.current.value,
             password:password.current.value,
         };
-        fetch('https://whatsapp-ba.herokuapp.com/login',{
+        fetch('https://whatsapp-ba.herokuapp.com:5000/login',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

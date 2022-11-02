@@ -11,7 +11,7 @@ const Authenticate = ({Component}) => {
   const router=useRouter();
   // console.log(data)
     useEffect(()=>{
-      fetch('https://whatsapp-ba.herokuapp.com/authorize',{
+      fetch('https://whatsapp-ba.herokuapp.com:5000/authorize',{
         method:"POST",
         headers:{
           'Content-Type': 'application/json',
