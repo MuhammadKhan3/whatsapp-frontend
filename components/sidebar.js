@@ -47,7 +47,7 @@ const SideBar = () => {
       socket.emit("connected",{userId:cookies.userId,socketId:socketID});
   //     }
   //     connected();
-          fetch(`https://whatsapp-ba.herokuapp.com:5000/get-users`,
+          fetch(`https://whatsapp-ba.herokuapp.com/get-users`,
           {
             method:'POST',
             headers:{
@@ -72,7 +72,7 @@ const SideBar = () => {
   useEffect(()=>{
     // if(menuflag){
       const messages=()=>{
-        fetch(`https://whatsapp-ba.herokuapp.com:5000/messages`,
+        fetch(`https://whatsapp-ba.herokuapp.com/messages`,
         {
           method:'POST',
           headers:{
@@ -101,7 +101,7 @@ const SideBar = () => {
   const searchHandler=(event)=>{
     const {value}=event.target;
     console.log(value)
-    fetch(`https://whatsapp-ba.herokuapp.com:5000/search-users`,
+    fetch(`https://whatsapp-ba.herokuapp.com/search-users`,
     {
       method:'POST',
       headers:{

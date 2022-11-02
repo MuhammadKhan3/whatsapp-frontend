@@ -15,7 +15,7 @@ function LoginPage() {
             email:email.current.value,
             password:password.current.value,
         };
-        fetch('https://whatsapp-ba.herokuapp.com:5000/login',{
+        fetch('https://whatsapp-ba.herokuapp.com/login',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
