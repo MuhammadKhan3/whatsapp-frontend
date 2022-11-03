@@ -92,9 +92,44 @@
   display: flex;
   flex-direction: row;
   z-index: 99999;
+  position: fixed;
 }
-.video{
-  z-index: 9999;
+.videoLocal{
+  /* z-index: 9999; */
+  position: absolute;
+  top: 220px;
+  left: 290px;
+  /* top: ; */
+
+}
+.micIcon{
+  position: absolute;
+  left: 0px;
+  width: 40px;
+  fill: white;
+  top: 250px;
+  left: 120px;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  /* background-color: ; */
+}
+.videoIcon{
+  position: absolute;
+  left: 170px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  top: 250px;
+  color: white;
+  background-color: lightblue;
+
+  z-index: 99999;
+}
+.videoRemote{
+
 }
 
 .local{
@@ -104,4 +139,22 @@
 .remote{
   border-radius: 20px;
   width: 400px;
+}
+.phoneIconContainer{
+  display: inline;
+  z-index: 9999;
+}
+.phoneIcons{
+  width:20px;
+}
+.phoneIcons:hover{
+  background-color: lightblue;
+  padding: 5px;
+  width:30px;
+  border-radius: 50px;
+}
+.phoneIcons:active{
+  fill: #fff;
+  background-color: lightsteelblue;
+  
 }
