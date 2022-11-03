@@ -15,7 +15,7 @@ const Authenticate = ({Component}) => {
         method:"POST",
         headers:{
           'Content-Type': 'application/json',
-          "Authorization":"Bearer "+cookies.token,
+          "Authorization":"Bearer "+cookies?.token,
         }
       }).then((response)=>{
         console.log('res',response)

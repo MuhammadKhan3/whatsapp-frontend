@@ -12,7 +12,7 @@ const LastMessage = (receiveId) => {
 
   return (dispatch)=>{
     const fetchapi=()=>{
-        fetch("https://whatsapp-ba.herokuapp.com/last-message",{
+        fetch("http://localhost:8000/last-message",{
             method:'POST',
             headers:{
               'Content-Type': 'application/json',

@@ -108,11 +108,11 @@ const MessageBox = ({messagesEndRef,messages,user}) =>{
                  <div className={Styles.videoContainer}>
                     <div className={Styles.video}>
                       <p>Remote</p>
-                      <video ref={remoteuserref} autoPlay/>
+                      <video className={Styles.remote} ref={remoteuserref} autoPlay/>
                     </div>
                     <div className={Styles.video}>
                       <p>local</p>
-                      <video ref={localuserref} muted autoPlay playsInline/>
+                      <video className={Styles.local} ref={localuserref} muted autoPlay playsInline/>
                     </div>
                  </div>
               </div>
@@ -121,8 +121,8 @@ const MessageBox = ({messagesEndRef,messages,user}) =>{
         <div className={Styles.messageContainer}>
             <ul 
             className={Styles.messageList}>
-              {messages.map((message)=>{
-                return<>
+              {messages.map((message,i)=>{
+                return<div key={i}>
                 {message?.receiveId===parseInt(cookies.userId) ?
                 <div  className={Styles.sender}>
                     <li className={Styles.receiveMessage}>{message.message} <span className={Styles.sendMessagetime}>{moment(message.createdAt).format("h:mm a")}</span></li>
@@ -132,7 +132,7 @@ const MessageBox = ({messagesEndRef,messages,user}) =>{
                   <li className={Styles.sendMessage} style={{float:'right',marginRight:'30px'}} ref={targetRef}>{message.message}<span className={Styles.sendMessagetime}>{moment(message.createdAt).format("h:mm a")}</span></li>
                 </div>
                 }
-                </>
+                </div>
               })}            
 
 

@@ -210,7 +210,7 @@ const SideBar = () => {
 
               {/* {value?.messages[0]?.receive_id?.id!==parseInt(cookies.userId)
                 ? */}
-                <div className={styles.inboxinnerContainer} key={value}  onMouseEnter={()=>{setarrow(i+1)}} onMouseLeave={()=>{setarrow(0)}} id={value?.id} onClick={()=>{inboxhandler(value?.id,value?.email)}}>
+                <div className={styles.inboxinnerContainer} key={i}  onMouseEnter={()=>{setarrow(i+1)}} onMouseLeave={()=>{setarrow(0)}} id={value?.id} onClick={()=>{inboxhandler(value?.id,value?.email)}}>
                 <div className={styles.profileContainer}>
                   <Image
                     src={imgsrc}

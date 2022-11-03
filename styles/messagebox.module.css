@@ -94,5 +94,14 @@
   z-index: 99999;
 }
 .video{
+  z-index: 9999;
+}
+
+.local{
+  border-radius: 20px;
+  width: 100px;
+}
+.remote{
+  border-radius: 20px;
   width: 400px;
 }
