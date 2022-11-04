@@ -102,6 +102,19 @@
   /* top: ; */
 
 }
+.micMuteIcon{
+  position: absolute;
+  left: 0px;
+  width: 40px;
+  fill: white;
+  top: 250px;
+  left: 120px;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
 .micIcon{
   position: absolute;
   left: 0px;
@@ -114,6 +127,18 @@
   border-radius: 50px;
   cursor: pointer;
   /* background-color: ; */
+}
+.videMuteIcon{
+  position: absolute;
+  left: 170px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  top: 250px;
+  color: white;
+  background-color: lightblue;
+  z-index: 99999;  
 }
 .videoIcon{
   position: absolute;
@@ -145,6 +170,7 @@
   z-index: 9999;
 }
 .phoneIcons{
+  z-index: 9999;
   width:20px;
 }
 .phoneIcons:hover{
