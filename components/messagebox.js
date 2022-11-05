@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { message_action } from '../redux/messageSlice';
 import { socket } from './socket';
 import Callnotification from './callnotification';
+// import {} from 'React-ic'
 var Peer = require('simple-peer');
 
 const MessageBox = ({messagesEndRef,messages,user}) =>{
@@ -174,8 +175,8 @@ const MessageBox = ({messagesEndRef,messages,user}) =>{
         </div>
         <InputBox messagesEndRef={messagesEndRef}/>
         {calls?.isReceivedCall && !callaccepted &&
-        <Callnotification answerhandler={answerCall}/>
-        }
+        <Callnotification answerhandler={answerCall} setcallaccepted={setcallaccepted} callaccepted={callaccepted}/>
+       } 
     </div>
   )
 }
