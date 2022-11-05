@@ -103,7 +103,7 @@ const MessageBox = ({messagesEndRef,messages,user}) =>{
     const unMuteVideohandler=()=>{
       setvideo(!video);
       stream.getVideoTracks()[0].enabled = true;
-
+      console.log('unmute')
     }
     const Mutehandler=()=>{
       setaudio(false)
